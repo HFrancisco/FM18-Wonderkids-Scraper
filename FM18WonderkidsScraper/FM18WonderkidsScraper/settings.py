@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for tutorialscraper project
+# Scrapy settings for FM18WonderkidsScraper project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,20 +9,17 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'tutorialscraper'
+BOT_NAME = 'FM18WonderkidsScraper'
 
-SPIDER_MODULES = ['tutorialscraper.spiders']
-NEWSPIDER_MODULE = 'tutorialscraper.spiders'
+SPIDER_MODULES = ['FM18WonderkidsScraper.spiders']
+NEWSPIDER_MODULE = 'FM18WonderkidsScraper.spiders'
 
-#Export as CSV Feed
-FEED_FORMAT = "csv"
-FEED_URI = "table.csv"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'tutorialscraper (+http://www.yourdomain.com)'
+#USER_AGENT = 'FM18WonderkidsScraper (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = False
+ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -50,13 +47,13 @@ ROBOTSTXT_OBEY = False
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'tutorialscraper.middlewares.TutorialscraperSpiderMiddleware': 543,
+#    'FM18WonderkidsScraper.middlewares.Fm18WonderkidsscraperSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'tutorialscraper.middlewares.TutorialscraperDownloaderMiddleware': 543,
+#    'FM18WonderkidsScraper.middlewares.Fm18WonderkidsscraperDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -68,7 +65,7 @@ ROBOTSTXT_OBEY = False
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'tutorialscraper.pipelines.TutorialscraperPipeline': 300,
+#    'FM18WonderkidsScraper.pipelines.Fm18WonderkidsscraperPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)

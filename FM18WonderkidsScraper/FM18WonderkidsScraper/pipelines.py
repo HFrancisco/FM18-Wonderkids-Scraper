@@ -6,6 +6,6 @@
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 
-class TutorialscraperPipeline(object):
+class Fm18WonderkidsscraperPipeline(object):
     def process_item(self, item, spider):
         return item
