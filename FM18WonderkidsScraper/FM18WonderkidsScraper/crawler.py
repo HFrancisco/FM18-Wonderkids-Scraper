@@ -4,9 +4,6 @@ from scrapy import spiderloader
 from scrapy.utils import project
 from scrapy.crawler import CrawlerProcess
 from scrapy.exporters import CsvItemExporter
-from FM18WonderkidsScraper.spiders import AMCSpider
-
-process = CrawlerProcess()
 
 # Exporting the data to CSVs
 def ExportToCSV(pSpiderName):
@@ -16,7 +13,7 @@ def ExportToCSV(pSpiderName):
         exporter = CsvItemExporter(file_to_save)
         exporter.start_exporting()
 
-def Crawl(pSpiderName):
+def Run(pSpiderName):
         process.crawl(pSpiderName)
         ExportToCSV(pSpiderName)
 
@@ -26,5 +23,7 @@ spider_loader = spiderloader.SpiderLoader.from_settings(settings)
 spiders = spider_loader.list()
 classes = [spider_loader.load(name) for name in spiders]
 
-#for name in spider_loader.list():
-#   Crawl(name)
+process = CrawlerProcess(settings)
+
+for name in spider_loader.list():
+        Run(name)
