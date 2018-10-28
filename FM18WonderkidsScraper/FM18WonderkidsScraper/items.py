@@ -8,7 +8,12 @@
 import scrapy
 
 
-class Fm18WonderkidsscraperItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class Player(scrapy.Item):
+    rating = scrapy.Field()
+    name = scrapy.Field()
+    age = scrapy.Field()
+    position = scrapy.Field()
+    club = scrapy.Field()
+    wage = scrapy.Field()
+    value = scrapy.Field()
+    nation = scrapy.Field()
