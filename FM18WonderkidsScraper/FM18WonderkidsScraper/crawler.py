@@ -15,7 +15,7 @@ def ExportToCSV(pSpiderName):
 
 def Run(pSpiderName):
         process.crawl(pSpiderName)
-        ExportToCSV(pSpiderName)
+        #ExportToCSV(pSpiderName)
 
 # Getting all spiders
 settings = project.get_project_settings()
@@ -26,4 +26,5 @@ classes = [spider_loader.load(name) for name in spiders]
 process = CrawlerProcess(settings)
 
 for name in spider_loader.list():
-        Run(name)
+        process.crawl(name)
+        process.start()

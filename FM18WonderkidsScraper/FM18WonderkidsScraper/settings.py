@@ -64,9 +64,10 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'FM18WonderkidsScraper.pipelines.Fm18WonderkidsscraperPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'FM18WonderkidsScraper.pipelines.CSVExportPipeline': 100,
+    'FM18WonderkidsScraper.pipelines.Fm18WonderkidsscraperPipeline': 300
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
